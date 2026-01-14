@@ -72,7 +72,7 @@ export default function Admin() {
 
   /* FETCH FUEL */
   const loadFuel = async () => {
-    const res = await http.get("/fuel", auth);
+    const res = await http.get("/fuel");
     setFuel(res.data || { regular: "", diesel: ""});
   };
 
@@ -167,7 +167,7 @@ export default function Admin() {
 
   /* Fetch Reviews */
   const loadReviews = async () => {
-    const res = await http.get("/reviews", auth);
+    const res = await http.get("/reviews");
     setReviews(res.data);
   };
 
