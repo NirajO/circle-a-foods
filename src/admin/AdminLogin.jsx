@@ -1,5 +1,5 @@
 import { useState } from "react";
-import axios from "axios";
+import http from "../services/http";
 
 export default function AdminLogin({ onLogin }) {
   const [password, setPassword] = useState("");
@@ -7,9 +7,7 @@ export default function AdminLogin({ onLogin }) {
 
   const login = async () => {
     try {
-      const res = await axios.post("/admin/login",
-        { password }
-      );
+      const res = await http.post("/admin/login", { password });
       localStorage.setItem("adminToken", res.data.token);
       onLogin();
     } catch {

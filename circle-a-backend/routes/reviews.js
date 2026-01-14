@@ -32,7 +32,7 @@ router.post("/", async (req, res) => {
   }
 });
 
-router.delete("/:id", async (req, res) => {
+router.delete("/:id", adminAuth, async (req, res) => {
   try {
     const review = await Review.findByIdAndDelete(req.params.id);
 

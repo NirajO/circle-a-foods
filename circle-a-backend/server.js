@@ -13,7 +13,7 @@ const app = express();
 
 app.use(cors({
   origin: [
-    "https://locahost:5173",
+    "https://localhost:5173",
     "https://circleafoods.com",
     "https://www.circleafoods.com",
   ],

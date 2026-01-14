@@ -73,7 +73,7 @@ export default function Admin() {
   /* FETCH FUEL */
   const loadFuel = async () => {
     const res = await http.get("/fuel", auth);
-    setFuel(res.data);
+    setFuel(res.data || { regular: "", diesel: ""});
   };
 
   useEffect(() => {
