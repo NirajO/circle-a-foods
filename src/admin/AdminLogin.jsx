@@ -7,8 +7,7 @@ export default function AdminLogin({ onLogin }) {
 
   const login = async () => {
     try {
-      const res = await axios.post(
-        "http://localhost:5000/api/admin/login",
+      const res = await axios.post("/admin/login",
         { password }
       );
       localStorage.setItem("adminToken", res.data.token);
