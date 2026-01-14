@@ -14,7 +14,8 @@ const app = express();
 app.use(cors({
   origin: [
     "https://locahost:5173",
-    "https://circle-a-foods.onrender.com"
+    "https://circleafoods.com",
+    "https://www.circleafoods.com",
   ],
   credentials: true
 }));
