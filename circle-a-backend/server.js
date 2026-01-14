@@ -12,7 +12,10 @@ import reviewRoutes from "./routes/reviews.js";
 const app = express();
 
 app.use(cors({
-  origin: "*",
+  origin: [
+    "https://locahost:5173",
+    "https://circle-a-foods.onrender.com"
+  ],
   credentials: true
 }));
 app.use(express.json());
