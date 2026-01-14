@@ -1,0 +1,76 @@
+@layer components {
+  /* ===== HERO ===== */
+  .hero {
+    @apply bg-primary text-white px-6 py-20 relative overflow-hidden;
+  }
+
+  .hero::after {
+    content: "";
+    @apply absolute inset-0 bg-black opacity-10;
+  }
+
+  .hero-container {
+    @apply max-w-6xl mx-auto relative z-10;
+  }
+
+  .hero-title {
+    @apply text-4xl md:text-5xl font-extrabold mb-4 tracking-tight;
+  }
+
+  .hero-subtitle {
+    @apply text-lg md:text-xl max-w-xl mb-8 opacity-90;
+  }
+
+  .btn-primary {
+    @apply bg-white text-primary px-6 py-3 rounded-lg font-semibold shadow hover:shadow-lg transition;
+  }
+
+  .btn-accent {
+    @apply bg-accent text-white px-6 py-3 rounded-lg font-semibold shadow hover:shadow-lg transition;
+  }
+
+  /* ===== INFO SECTION ===== */
+  .info-section {
+    @apply px-6 py-16 bg-gray-50;
+  }
+
+  .info-grid {
+    @apply max-w-6xl mx-auto grid gap-8 md:grid-cols-3;
+  }
+
+  .info-card {
+    @apply bg-white p-6 rounded-xl shadow-sm hover:shadow-lg transition transform hover:-translate-y-1;
+  }
+
+  .info-title {
+    @apply font-bold text-xl mb-3 flex items-center gap-2;
+  }
+}
+
+@layer components {
+  .fuel-section {
+    @apply px-6 py-16 bg-gray-50;
+  }
+
+  .fuel-grid {
+    @apply max-w-6xl mx-auto grid gap-6 sm:grid-cols-2 md:grid-cols-4;
+  }
+
+  .fuel-card {
+    @apply bg-white rounded-xl shadow-md p-6 text-center
+           hover:shadow-xl transition transform hover:-translate-y-1;
+  }
+
+  .fuel-type {
+    @apply text-lg font-semibold text-dark mb-2;
+  }
+
+  .fuel-price {
+    @apply text-4xl font-extrabold text-primary;
+  }
+
+  .fuel-updated {
+    @apply text-sm text-gray-500 text-center mt-8;
+  }
+}
+
